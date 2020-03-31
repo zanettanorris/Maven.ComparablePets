@@ -1,6 +1,6 @@
 package io.zipcoder;
 
-public class Cat implements Animal {
+public class Cat extends Pet implements Animal {
     private String name;
     private String type;
     public int getNumberOfCats;

@@ -1,10 +1,17 @@
 package io.zipcoder;
 
-public class Dog implements Animal {
+public class Dog extends Pet implements Animal {
+    String noise;
     private String name;
     private String speak;
     public int getNumberOfDogs;
-    public Dog() {
+    private String expectedNoise;
+
+    public Dog(String name) {
+        super(name);
+        noise = "meow";
+    }
+    public Dog(){
 
     }
     public Dog(String type, String name) {
@@ -21,4 +28,9 @@ public class Dog implements Animal {
     public String speak() {
         return "Ruffruff";
     }
+
+//    @Override
+//    public String speak(expectedNoise) {
+//        return expectedNoise;
+//    }
 }
