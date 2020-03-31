@@ -3,6 +3,8 @@ package io.zipcoder;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 public class CatTest {
 
     @Test
@@ -22,24 +24,27 @@ public class CatTest {
     public void testGetName() {
         Cat cat = new Cat();
         String expected = "Jelly Bean";
-
+        cat.setName(expected);
         Assert.assertEquals(expected, cat.getName());
     }
 
     @Test
     public void testSetName() {
         Cat cat = new Cat();
-        cat.setName();
         String expected = "Jersey";
-
+        cat.setName(expected);
         Assert.assertEquals(expected, cat.getName());
     }
 
     @Test
     public void getNumberOfCats() {
+        ArrayList<Animal> testList = new ArrayList<Animal>();
         Cat cat = new Cat();
-        int expected = 23;
+        Cat cat2 = new Cat();
+        testList.add(cat);
+        testList.add(cat2);
+        int expected = 2;
 
-        Assert.assertEquals(expected, cat.getNumberOfCats);
+        Assert.assertEquals(expected, testList.size());
     }
 }

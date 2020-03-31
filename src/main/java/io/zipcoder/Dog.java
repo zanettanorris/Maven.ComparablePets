@@ -1,21 +1,24 @@
 package io.zipcoder;
 
-public class Dog implements Pet {
-
+public class Dog implements Animal {
+    private String name;
+    private String speak;
     public int getNumberOfDogs;
-
     public Dog() {
 
     }
+    public Dog(String type, String name) {
 
-    public void setName() {
+    }
+
+    public void setName(String name) { this.name = name;
     }
 
     public String getName() {
-        return null;
+        return name;
     }
 
     public String speak() {
-        return null;
+        return "Ruffruff";
     }
 }
